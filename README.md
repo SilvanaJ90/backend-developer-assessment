@@ -1,4 +1,4 @@
-# 🏛️ Technical Evaluation – Backend Developer (Python)
+# Technical Evaluation – Backend Developer (Python)
 
 <p align="center">
   <img width="460" height="450" src="h">
@@ -20,15 +20,16 @@
 ---
 
 
-### Problem
+## Problem
 Design and implement a clean, maintainable, and well-documented RESTful API to manage chat message workflows — including validation, processing, storage, and retrieval.  
 The goal is to evaluate backend development skills in **Python**, applying clean architecture principles, error handling, testing, and documentation best practices.
+
 
 ---
 ## 📋 Project Planning
 
 ### Project Description
-This project consists of a **RESTful API** built with **Python (FastAPI or Flask)** that receives, processes, and stores chat messages.  
+This project consists of a **RESTful API** built with **Python and Flask** that receives, processes, and stores chat messages.  
 It includes validation, simple inappropriate-content filtering, metadata generation, and message retrieval by session.
 
 ### General Objective
@@ -44,7 +45,7 @@ Build a simple and maintainable message-processing API that follows backend deve
 
 ### Project Requirements
 - **Python Version**: 3.10+  
-- **Framework**: FastAPI or Flask  
+- **Framework**: Flask  
 - **Database**: SQLite  
 - **Testing**: Pytest  
 - **Dependencies**: Listed in `requirements.txt`  
@@ -64,20 +65,7 @@ Build a simple and maintainable message-processing API that follows backend deve
 | **5. Testing** | Implement unit and integration tests with Pytest (minimum 80% coverage). |
 | **6. Documentation** | Document API endpoints in README and/or Swagger UI (if using FastAPI). |
 
----
 
-## 🚀 How to Start It
-
-| Step                         | Command | Description |
-|------------------------------|---------|-------------|
-| Clone the project            | `git clone https://github.com/your-username/backend-developer-assessment-python.git` | Clone the repository |
-| Move to project folder       | `cd backend-developer-assessment-python` | Navigate into project directory |
-| Create virtual environment   | `python -m venv .venv` | Create isolated Python environment |
-| Activate on Windows          | `.\.venv\Scripts\Activate.ps1` | Activate environment on Windows |
-| Activate on macOS/Linux      | `source .venv/bin/activate` | Activate environment on macOS/Linux |
-| Install dependencies         | `pip install -r requirements.txt` | Install all required packages |
-| Run development server (FastAPI) | `uvicorn main:app --reload` | Start the API locally |
-| Run tests                    | `pytest --cov=.` | Run tests with coverage report |
 
 ---
 
@@ -93,8 +81,10 @@ Build a simple and maintainable message-processing API that follows backend deve
   "timestamp": "2023-06-15T14:30:00Z",
   "sender": "system"
 }
+```
 Response Example:
-{
+
+```{
   "status": "success",
   "data": {
     "message_id": "msg-123456",
@@ -109,10 +99,12 @@ Response Example:
     }
   }
 }
+```
 
 Error Example:
 
-{
+
+```{
   "status": "error",
   "error": {
     "code": "INVALID_FORMAT",
@@ -120,21 +112,25 @@ Error Example:
     "details": "The 'sender' field must be either 'user' or 'system'."
   }
 }
+```
 
 ---
 
 
 
 ## 🚀 How to Start It
+
 | Step                         | Command | Description |
 |------------------------------|---------|-------------|
-| Clone the project            | `git clone ` | Clone repository |
+| Clone the project            | `git clone https://github.com/your-username/backend-developer-assessment-python.git` | Clone the repository |
+| Move to project folder       | `cd backend-developer-assessment-python` | Navigate into project directory |
 | Create virtual environment   | `python -m venv .venv` | Create isolated Python environment |
-| Activate on Windows          | `.\.venv\Scripts\Activate.ps1` | Activate virtual environment (Windows) |
-| Activate on macOS/Linux      | `source .venv/bin/activate` | Activate virtual environment (macOS/Linux) |
-| Install dependencies         | `pip install -r requirements.txt` | Install all required libraries |
-| **Create `.env` file** | `nano .env` | Create environment file with your API keys |
-etc
+| Activate on Windows          | `.\.venv\Scripts\Activate.ps1` | Activate environment on Windows |
+| Activate on macOS/Linux      | `source .venv/bin/activate` | Activate environment on macOS/Linux |
+| Install dependencies         | `pip install -r requirements.txt` | Install all required packages |
+| Run development server (FastAPI) | `` | Start the API locally |
+| Run tests                    | `` | Run tests with coverage report |
+
 
 
 ---
