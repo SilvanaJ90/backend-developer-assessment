@@ -1,0 +1,29 @@
+---
+tags:
+  - Messages
+summary: Create a new message
+description: Creates a new message linked to the authenticated user and a session.
+parameters:
+  - name: body
+    in: body
+    required: true
+    schema:
+      type: object
+      properties:
+        session_id:
+          type: string
+          description: Session identifier
+        content:
+          type: string
+          description: Text content of the message
+        timestamp:
+          type: string
+          format: date-time
+          description: ISO8601 timestamp (optional)
+responses:
+  201:
+    description: Message created successfully
+  400:
+    description: Missing required fields or invalid content
+  401:
+    description: Unauthorized (JWT required)

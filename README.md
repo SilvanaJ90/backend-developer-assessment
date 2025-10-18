@@ -160,3 +160,5 @@ You can try the live demo here:
 
 ## 👩‍💻 Authors
 [![Mia contributors](https://contrib.rocks/image?repo=SilvanaJ90/backend-developer-assessment)](https://github.com/SilvanaJ90/backend-developer-assessment/graphs/contributors)  
+
+

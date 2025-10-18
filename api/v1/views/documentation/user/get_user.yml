@@ -1,0 +1,46 @@
+---
+tags:
+  - Users
+summary: Retrieves a specific user
+description: Retrieves a user by their unique ID.
+
+parameters:
+  - name: user_id
+    in: path
+    required: true
+    description: The ID of the user to retrieve
+    schema:
+      type: string
+
+responses:
+  200:
+    description: Request executed successfully
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            __class__:
+              type: string
+            id:
+              type: string
+              description: The UUID of the instance
+            email:
+              type: string
+              description: User's email
+            first_name:
+              type: string
+              description: User's first name
+            last_name:
+              type: string
+              description: User's last name
+  404:
+    description: User not found
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            error:
+              type: string
+              example: "User not found!"

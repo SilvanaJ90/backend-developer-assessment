@@ -1,0 +1,58 @@
+---
+tags:
+  - Users
+summary: Register a new user
+description: Creates a new user in the system and returns an access token.
+
+requestBody:
+  required: true
+  content:
+    application/json:
+      schema:
+        type: object
+        required:
+          - email
+          - password
+          - first_name
+          - last_name
+          - is_user
+        properties:
+          email:
+            type: string
+            description: User's email
+          password:
+            type: string
+            description: User's password
+          first_name:
+            type: string
+            description: User's first name
+          last_name:
+            type: string
+            description: User's last name
+          is_user:
+            type: boolean
+            description: Whether the user is a regular user or admin
+
+responses:
+  201:
+    description: User created successfully
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            message:
+              type: string
+              example: "user created"
+            access_token:
+              type: string
+  400:
+    description: Missing required fields or invalid JSON
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            error:
+              type: string
+              example: "missing data"

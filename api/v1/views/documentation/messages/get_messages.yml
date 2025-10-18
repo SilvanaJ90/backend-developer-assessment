@@ -1,0 +1,33 @@
+---
+tags:
+  - Messages
+summary: Get messages
+description: Retrieves messages, can filter by session_id or user_id.
+parameters:
+  - name: session_id
+    in: query
+    type: string
+    required: false
+    description: Filter messages by session ID
+  - name: user_id
+    in: query
+    type: string
+    required: false
+    description: Filter messages by user ID
+  - name: limit
+    in: query
+    type: integer
+    required: false
+    default: 100
+    description: Max number of messages to return
+  - name: offset
+    in: query
+    type: integer
+    required: false
+    default: 0
+    description: Pagination offset
+responses:
+  200:
+    description: List of messages
+  401:
+    description: Unauthorized (JWT required)

@@ -1,0 +1,18 @@
+---
+tags:
+  - Messages
+summary: Delete a message
+description: Deletes a message by its ID.
+parameters:
+  - name: message_id
+    in: path
+    type: string
+    required: true
+    description: ID of the message to delete
+responses:
+  200:
+    description: Message deleted successfully
+  404:
+    description: Message not found
+  401:
+    description: Unauthorized (JWT required)

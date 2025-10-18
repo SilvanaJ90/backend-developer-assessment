@@ -1,0 +1,35 @@
+---
+tags:
+  - Users
+summary: Retrieves a list of all users
+description: Returns all user objects in the system.
+
+responses:
+  200:
+    description: Request executed successfully
+    content:
+      application/json:
+        schema:
+          type: array
+          items:
+            type: object
+            properties:
+              __class__:
+                type: string
+                description: Class name of the object
+              id:
+                type: string
+                description: The UUID of the user
+              email:
+                type: string
+                description: User's email
+              first_name:
+                type: string
+                description: User's first name
+              last_name:
+                type: string
+                description: User's last name
+            required:
+              - __class__
+              - id
+              - email

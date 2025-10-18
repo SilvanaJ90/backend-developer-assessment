@@ -1,0 +1,29 @@
+---
+tags:
+  - Messages
+summary: Update a message
+description: Updates the content of an existing message by its ID.
+parameters:
+  - name: message_id
+    in: path
+    type: string
+    required: true
+    description: ID of the message to update
+  - name: body
+    in: body
+    required: true
+    schema:
+      type: object
+      properties:
+        content:
+          type: string
+          description: New message content
+responses:
+  200:
+    description: Message updated successfully
+  400:
+    description: Invalid request or missing JSON
+  404:
+    description: Message not found
+  401:
+    description: Unauthorized (JWT required)
